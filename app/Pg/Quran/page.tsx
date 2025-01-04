@@ -23,7 +23,7 @@ const QuranHomePage = () => {
   const { theme } = useGContext();
   const ThemeScss = theme === "light" ? light_scss : dark_scss;
 
-  const [metaData, setMetaData] = useState<metadata_type[]>([]);
+  const [metaData, setMetaData] = useState<metadata_type>([]);
   useEffect(() => {
     const fetchData = async () => {
       const data = await GetQuranMetaData();

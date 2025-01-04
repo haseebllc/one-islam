@@ -7,6 +7,7 @@ import React, {
   useState,
   forwardRef,
   useImperativeHandle,
+  LegacyRef,
 } from "react";
 import classNames from "classnames";
 import { useDispatch, useSelector } from "react-redux";
@@ -18,7 +19,7 @@ import light from "../theme/light.module.scss";
 import dark from "../theme/dark.module.scss";
 
 const AllChapters = forwardRef(
-  ({ metaData }: { metaData: metadata_type[] }, ref) => {
+  ({ metaData }: { metaData: metadata_type }, ref) => {
     // theme
     const { theme } = useGContext();
     const ThemeScss = theme === "light" ? light : dark;
@@ -41,11 +42,11 @@ const AllChapters = forwardRef(
 
     // Declare stc_ref and surahRefs
     const stc_ref = useRef<HTMLDivElement>(null);
-    const surahRefs = useRef<(HTMLDivElement | null)[]>([]);
+    const surahRefs = useRef<HTMLDivElement[]>([]);
 
     // Scroll to the current surah
+    const surahElement = surahRefs.current[currentSurah - 1];
     useEffect(() => {
-      const surahElement = surahRefs.current[currentSurah - 1]?.current;
       if (stc_ref.current && surahElement) {
         stc_ref.current.scrollTo({
           top: surahElement.offsetTop - 265,

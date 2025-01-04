@@ -10,7 +10,7 @@ import dark from "../theme/dark.module.scss";
 import { useGContext } from "@/app/contextApi/contextApi";
 import { chapter_details_type, metadata_type } from "./quran_schema";
 
-const FindChapter: FC<{ metaData: metadata_type[] }> = ({ metaData }) => {
+const FindChapter: FC<{ metaData: metadata_type }> = ({ metaData }) => {
   // theme
   const { theme } = useGContext();
   const ThemeScss = theme === "light" ? light : dark;
@@ -21,10 +21,9 @@ const FindChapter: FC<{ metaData: metadata_type[] }> = ({ metaData }) => {
 
   useEffect(() => {
     if (metaData && metaData[0]?.chapter_details) {
-      const chapter_details: chapter_details_type[] =
-        metaData[0].chapter_details;
-      const data = globalThis.Array.isArray(chapter_details)
-        ? (chapter_details as any).map((elem) => ({
+      const chapter_details = metaData[0].chapter_details;
+      const data = Array.isArray(chapter_details)
+        ? (chapter_details as any).map((elem: any) => ({
             surahNo: elem.surahNo,
             surahName: elem.surahName,
             surahNameTranslation: elem.surahNameTranslation,

@@ -14,7 +14,7 @@ import dark from "../theme/dark.module.scss";
 import { useGContext } from "@/app/contextApi/contextApi";
 import { chapter_details_type, metadata_type } from "./quran_schema";
 
-const SoloChapter = ({ metaData }: { metaData: metadata_type[] }) => {
+const SoloChapter = ({ metaData }: { metaData: metadata_type }) => {
   // theme
   const { theme } = useGContext();
   const ThemeScss = theme === "light" ? light : dark;
