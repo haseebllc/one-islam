@@ -1,0 +1,52 @@
+@import "../../../scss/partials/variable";
+
+/**/
+
+.ReviewsSect_container {
+    background-color: $theme_green_08;
+    color: white;
+    // heading ---
+    .heading_wrap {
+        .heading {
+            // pseudo 
+            .heading_pseudo {
+                span {
+                    background-color: white;
+                    width: 1.5px;
+                }
+            }
+            // text 
+            .heading_text {
+                h4 {
+                    font-weight: 500;
+                    font-size: 35px;
+                }
+                p {}
+            }
+        }
+    }
+    //  content ---
+    .reviews__row {
+        .review_boxWrap {
+            .boxWrap__anim {}
+            .boxWrap__anim_01 {
+                background-color: $theme_green_06;
+                background-color: white;
+            }
+            .boxWrap__anim_02 {
+                background-color: black;
+            }
+            .slide__box__outter {
+                background-color: $theme_green_08;
+                .title {}
+                .slide__box__inner {
+                    p {
+                        font-weight: 200;
+                        font-size: 17px;
+                    }
+                    h4 {}
+                }
+            }
+        }
+    }
+}

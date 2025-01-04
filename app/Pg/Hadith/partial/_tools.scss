@@ -1,0 +1,98 @@
+.tools__wrap {
+    width: 100%;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    user-select: none;
+    .tools__wrap__innnerFlex {
+        @extend .flexRowBetween;
+        .innerFlex_col {
+            display: flex;
+            .tool {
+                cursor: pointer;
+            }
+            // .change__book_chapter 
+            .change__book_chapter {
+                margin-right: 15px;
+            }
+        }
+    }
+}
+
+// toggle details  col 1
+.headerTool_col1 {
+    position: relative;
+    cursor: pointer;
+    &:hover {
+        >div {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    >span {
+        font-size: 25px;
+        position: relative;
+    }
+    >div {
+        position: absolute;
+        top: calc(-150%);
+        left: 0;
+        width: max-content;
+        padding: 3px 10px;
+        transition: 0.3s ease;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.4s ease;
+        p {
+            &::before {
+                content: '';
+                position: absolute;
+                top: 100%;
+                left: 7px;
+                height: 12px;
+                width: 12px;
+                transform: rotate(-45deg) translateY(-53%) translateX(50%);
+            }
+            span {
+                position: relative;
+                font-size: 15px;
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+// header tools col 2
+.headerTool_col2 {
+    border-radius: 10px;
+    padding: 7px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-left: 9px;
+    &:hover {
+        input {}
+    }
+    >p {
+        font-size: 13px;
+        font-weight: 300;
+        padding-bottom: 3px;
+    }
+    >div {
+        display: flex;
+        >p {
+            padding-right: 7px;
+            font-size: 13px;
+            font-weight: 300;
+            input {
+                height: 18px;
+                width: 70px;
+                // margin-left: 5px;
+                padding-left: 3px;
+                font-size: 14px;
+                transition: 0.3s ease;
+            }
+        }
+        span {
+            font-size: 18px;
+        }
+    }
+}

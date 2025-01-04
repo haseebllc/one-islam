@@ -1,0 +1,119 @@
+@import "../../../scss/partials/variable";
+
+/**/
+
+.aboutUs_container {
+    background-color: $theme_green_08;
+    color: white;
+    // heading ---
+    .heading {
+        // pseudo 
+        .heading_pseudo {
+            span {
+                background-color: white;
+                width: 1.5px;
+            }
+        }
+        // text 
+        .heading_text {
+            h4 {
+                font-weight: 500;
+            }
+        }
+    }
+    // section --- 
+    .flex__parrent {
+        .flex__childRow1 {
+            // img-box 
+            .imgBox {
+                // actual-image 
+                img {}
+                // img-hover-animation 
+                .imgAnim {
+                    background-color: rgba(0, 0, 0, 0.32);
+                    position: absolute;
+                    a {
+                        background-color: rgba(0, 0, 0, 0.663);
+                        &:hover {}
+                        span {
+                            color: white;
+                        }
+                    }
+                }
+            }
+            // text-box 
+            .textBox__container {
+                background-color: rgba(255, 255, 255, 0.421);
+                color: black;
+                .textBox {
+                    .title {
+                        font-weight: 500;
+                    }
+                    .desc {
+                        font-weight: 400;
+                    }
+                    .button {
+                        background-color: transparent;
+                        a {
+                            background: linear-gradient(to right, $theme_green_01 50%, black 50%);
+                            background-clip: text;
+                            background-size: 200% 100%;
+                            background-position: 100%;
+                            -webkit-text-fill-color: transparent;
+                            &:hover {
+                                background-position: 0 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .flex__childRow2 {
+            // img-box 
+            .imgBox {
+                // actual-image 
+                img {}
+                // img-hover-animation 
+                .imgAnim {
+                    background-color: rgba(0, 0, 0, 0.32);
+                    position: absolute;
+                    a {
+                        background-color: rgba(0, 0, 0, 0.663);
+                        &:hover {}
+                        span {
+                            color: white;
+                        }
+                    }
+                }
+            }
+            // text-box 
+            .textBox__container {
+                background-color: $theme_gray_07;
+                background-color: rgb(21, 21, 21);
+                color: white;
+                .textBox {
+                    .title {
+                        font-weight: 300;
+                    }
+                    .desc {
+                        font-weight: 200;
+                        font-size: 15px;
+                    }
+                    .button {
+                        background-color: transparent;
+                        a {
+                            background: linear-gradient(to right, $theme_green_03 50%, white 50%);
+                            background-clip: text;
+                            background-size: 200% 100%;
+                            background-position: 100%;
+                            -webkit-text-fill-color: transparent;
+                            &:hover {
+                                background-position: 0 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

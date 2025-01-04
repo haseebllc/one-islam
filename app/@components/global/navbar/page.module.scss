@@ -1,0 +1,132 @@
+/* app/components/navigation/page.module.scss */
+
+@import "../../../scss/partials/variable";
+@import "../../../scss/partials/extend";
+
+/**/
+
+.flexAllCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexAlignCenter {
+    display: flex;
+    align-items: center;
+}
+
+.flexJustifyCenter {
+    display: flex;
+    justify-content: center;
+}
+
+// Header 
+.header {
+    .nav__01 {
+        @extend .flexRowBetween;
+        transition: 0.4s ease;
+        display: flex;
+        width: 100%;
+        padding: 20px 0 25px 0;
+        // logo  
+        .logo {
+            cursor: pointer;
+            width: max-content;
+            img {
+                width: 125px;
+                height: max-content;
+            }
+        }
+        // navigation  
+        .nav__ul {
+            @extend .flexAllCenter;
+            // navigation / links 
+            .nav_ul_li__active {
+                a {
+                    &::after {
+                        width: 100% !important;
+                    }
+                }
+            }
+            .nav_ul_li {
+                text-transform: capitalize;
+                font-weight: 400;
+                font-size: 15px;
+                margin: 0 7px;
+                a {
+                    position: relative;
+                    &::after {
+                        content: "";
+                        width: 0;
+                        height: .5px;
+                        position: absolute;
+                        bottom: -5px;
+                        left: 0;
+                        transition: 0.3s ease;
+                    }
+                    &:hover::after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        // buttons 
+        .nav__buttons {
+            @extend .flexAllCenter;
+            // theming buton 
+            .ThemeChangeButton {
+                @extend .flexAlignCenter;
+                position: relative;
+                .ThemeChangeButton_icon {
+                    cursor: pointer;
+                    user-select: none;
+                    font-size: 20px;
+                    margin: 0 3px;
+                    width: 25px;
+                    text-align: center;
+                    transition: 0.4s ease;
+                    background: transparent;
+                    z-index: 2;
+                }
+                // anim \
+                .isActive_animation {
+                    position: absolute;
+                    top: 50%;
+                    width: 30px;
+                    height: 30px;
+                    pointer-events: none;
+                    border-radius: 100%;
+                    transform: translateY(-50%);
+                    transition: 0.3s;
+                }
+            }
+            // explore button 
+            .signupButton_Container {
+                margin: 0 0 0 10px;
+                width: max-content;
+                height: max-content;
+                .signup__button {
+                    @extend .flexAllCenter;
+                    padding: 7px 21px;
+                    border: 1px solid;
+                    border-radius: 18px;
+                    &:hover span {
+                        transform: translateX(6px)
+                    }
+                    p {
+                        font-size: 14px;
+                        font-weight: 400;
+                        text-transform: lowercase;
+                        padding-right: 5px;
+                    }
+                    span {
+                        font-size: 18px;
+                        transform: translateY(.5px);
+                        transition: 0.3s ease;
+                    }
+                }
+            }
+        }
+    }
+}

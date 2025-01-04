@@ -1,0 +1,64 @@
+ @import "../../../scss/partials/variable";
+ /**/
+ 
+ .QuranAboutContainer {
+     .QuranAboutContainer__row {
+         .row__col {}
+         // col1 
+         .row__imgWrapper,
+         .row__col1 {
+             img {}
+         }
+         // col2 
+         .row__textWrapper,
+         .row__col2 {
+             .textBox1 {
+                 border-left: 2px solid #000;
+                 h4 {}
+             }
+             .textBox {
+                 h4 {}
+                 p {}
+             }
+             //  explore button 
+             .exploreButton {
+                 background-color: transparent;
+                 a {
+                     background: linear-gradient(to right, $theme_green_04 50%, black 50%);
+                     background-clip: text;
+                     background-size: 200% 100%;
+                     background-position: 100%;
+                 }
+             }
+         }
+     }
+ }
+ 
+ //  Navigate button 
+ .NavigateButton_container {
+     .NavigateButton {
+         color: black;
+         .NavigateBtnSect_text_Btn_wrapper1 {
+             background-color: $theme_light_03;
+         }
+         .NavigateBtnSect_text_Btn_wrapper2 {
+             background-color: $theme_light_01;
+             background-color: white;
+             .NavigateButton_text {
+                 h4 {}
+                 p {}
+             }
+             .NavigateButton_button {
+                 a {
+                     background-color: $theme_green_05;
+                     border: 1px solid $theme_green_05;
+                     color: white;
+                     &:hover {
+                         background-color: $theme_light_01;
+                         color: $theme_green_05;
+                     }
+                 }
+             }
+         }
+     }
+ }

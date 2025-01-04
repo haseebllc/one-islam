@@ -1,0 +1,182 @@
+@import "@/app/scss/partials/variable";
+
+/**/
+
+.usefull_toolsContainer {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    .containerInner {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        .tool {
+            position: relative;
+            .toolAbslt {
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: translateY(-150%);
+                background-color: $theme_aqua_02;
+                width: max-content;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.2s ease, visibility 0.2s;
+                >div {
+                    position: relative;
+                    p {
+                        color: white;
+                        padding: 5px 12px;
+                        font-size: 14px;
+                        position: relative;
+                    }
+                    span {
+                        position: absolute;
+                        transform: translateX(4px) rotate(-40deg);
+                        background-color: $theme_aqua_02;
+                        width: 15px;
+                        height: 20px;
+                        opacity: 0;
+                        bottom: -5px;
+                        left: 0;
+                        visibility: hidden;
+                        transition: opacity 0.2s ease, visibility 0.2s;
+                    }
+                }
+            }
+            &:hover .toolAbslt {
+                opacity: 1;
+                visibility: visible;
+                >div span {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+            cursor: pointer;
+            span {
+                user-select: none;
+                font-size: 25px;
+            }
+        }
+        .scrollToCurrent_tool {
+            span {
+                transform: rotate( -90deg);
+            }
+        }
+    }
+    // .langSelectContainer 
+    .noMatch {
+        color: white;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .langSelectContainer {
+        display: flex;
+        align-items: center;
+        .selectBox {
+            margin-right: 7px;
+            .currentView {
+                border: 1px solid #000;
+                padding: 10px 10px 7px 10px;
+                position: relative;
+                min-width: 150px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                user-select: none;
+                position: relative;
+                >p {
+                    position: absolute;
+                    top: 0;
+                    transform: translateY(-50%);
+                    left: 10%;
+                    background-color: $theme_light_02;
+                    font-size: 14px;
+                    font-weight: 500;
+                    padding: 0 5px;
+                }
+                >input {
+                    padding-right: 15px;
+                }
+                >span {
+                    font-size: 21px;
+                    transition: 0.2s ease;
+                    border-radius: 100%;
+                    border: 1px solid #000;
+                    width: 20px;
+                    height: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding-top: 2px;
+                    &:hover {
+                        background-color: $theme_aqua_02;
+                        color: white;
+                        cursor: pointer;
+                        transform: translateY(1.5px) scale(.90);
+                    }
+                }
+                .displayBox {
+                    position: absolute;
+                    top: 120%;
+                    right: -1px;
+                    min-width: 150px;
+                    padding: 18px 15px;
+                    background-color: $theme_green_07;
+                    background-color: $theme_green_05;
+                    z-index: 3;
+                    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.144);
+                    overflow-y: auto;
+                    display: block;
+                    max-height: 200px;
+                    input {
+                        padding-left: 5px;
+                        height: 30px;
+                        color: black;
+                        margin-bottom: 10px;
+                        pointer-events: all;
+                        &::placeholder {
+                            padding-left: 2px;
+                        }
+                    }
+                    .box {
+                        .languageOption {
+                            margin: 6px 0;
+                            cursor: pointer;
+                            display: flex;
+                            align-items: center;
+                            &:hover span {
+                                opacity: 1;
+                            }
+                            p {
+                                font-weight: 400;
+                                font-size: 16px;
+                                color: white;
+                            }
+                            span {
+                                font-weight: 400;
+                                font-size: 16px;
+                                padding-top: 1px;
+                                padding-left: 12px;
+                                transition: 0.2s ease;
+                                color: white;
+                                opacity: 0;
+                            }
+                        }
+                    }
+                }
+                .vrsnFetredisplayBox {
+                    padding: 10px 15px;
+                    p {
+                        pointer-events: all;
+                        border-bottom: 1px solid white;
+                        font-size: 15px;
+                        font-weight: 300;
+                        padding-bottom: 5px;
+                        width: max-content;
+                    }
+                }
+            }
+        }
+    }
+}

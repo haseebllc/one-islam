@@ -1,0 +1,103 @@
+ @import "../../../scss/partials/extend";
+ @import "../../../scss/partials/variable";
+ /**/
+ 
+ .HadithAboutContainer {
+     padding-bottom: 100px;
+     .HadithAboutContainer__row {
+         display: flex;
+         .row__col {
+             width: 50%;
+         }
+         // col2 
+         .row__imgWrapper,
+         .row__col2 {
+             padding-left: 100px;
+             img {
+                 width: 100%;
+                 height: max-content;
+             }
+         }
+         // col1 
+         .row__textWrapper,
+         .row__col1 {
+             .textBox1 {
+                 h4 {
+                     transform: translateY(-3px);
+                 }
+             }
+             .textBox {
+                 padding-left: 50px;
+                 margin-bottom: 40px;
+                 h4 {
+                     font-size: 32px;
+                     font-weight: 600;
+                     max-width: 400px;
+                     padding-bottom: 20px;
+                 }
+                 p {
+                     font-size: 15px;
+                     letter-spacing: .5px;
+                     font-weight: 300;
+                     max-width: 400px;
+                     line-height: 1.4;
+                 }
+             }
+             //  explore button 
+             .exploreButton {
+                 background-color: transparent;
+                 padding-top: 30px;
+                 a {
+                     width: max-content;
+                     position: relative;
+                     font-weight: 400;
+                     transition: 0.3s ease;
+                     overflow: hidden;
+                     transition: 0.3s ease;
+                     -webkit-text-fill-color: transparent;
+                     display: flex;
+                     p {
+                         font-size: 16px;
+                     }
+                     span {
+                         padding-left: 7px;
+                         font-size: 23px;
+                     }
+                     &:hover {
+                         background-position: 0 0;
+                     }
+                 }
+             }
+         }
+     }
+ }
+ 
+ //  ... 
+ .hadithBooks__infoRowContainer {
+     padding-bottom: 100px;
+     .hadithBooks__infoRow {
+         display: grid;
+         grid-template-columns: repeat(4, 1fr);
+         gap: 15px;
+         padding: 50px 40px;
+         .infoRowBox {
+             display: flex;
+             .infoRowBox_icon {
+                 span {
+                     font-size: 40px;
+                     padding-right: 20px;
+                 }
+             }
+             .infoRowBox_text {
+                 h4 {
+                     font-weight: 300;
+                     font-size: 30px;
+                 }
+                 p {
+                     font-size: 16px;
+                     font-weight: 400;
+                 }
+             }
+         }
+     }
+ }

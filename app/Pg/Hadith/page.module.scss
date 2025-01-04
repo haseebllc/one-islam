@@ -1,0 +1,170 @@
+@import "../../scss/partials/variable";
+@import "../../scss/partials/extend";
+@import "./partial/bookDetails";
+@import "./partial/ChapterHadiths";
+@import "./partial/tools";
+
+/**/
+
+.Hadithage__main {
+    // simple container wrap
+    .hadithPage_container {
+        width: 100%;
+        padding: 25px;
+    }
+    // current book details and curennt book chapter hadiths
+    .currentBook_nd_chapHadiths_wrap {
+        display: flex;
+        justify-content: space-between;
+        cursor: default;
+    }
+}
+
+// .change__book_nd_chapter 
+.change__book_nd_chapter {
+    // change__book_nd_chapter_close_btn 
+    .change__book_nd_chapter_close_btnWrap {
+        @extend .flexRowAllCenter;
+        padding-bottom: 20px;
+        .change__book_nd_chapter_close_btn {
+            @extend .flexRowAllCenter;
+            cursor: pointer;
+            text-align: center;
+            width: 100%;
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            transition: 0.3s ease;
+            &:hover {
+                transform: scale(.90);
+            }
+            span {
+                font-size: 25px;
+            }
+        }
+    }
+    // book, chapter navigation 
+    .selector_container {
+        @extend .flexRowAllCenter;
+        padding-top: 20px;
+        padding-bottom: 25px;
+        user-select: none;
+        .book_selector,
+        .chapter_selector {
+            p {
+                cursor: pointer;
+                padding: 7px 20px;
+                margin: 0 2px;
+                font-size: 16px;
+                font-weight: 300;
+                transition: all 0.4s;
+                border-bottom: 1px solid transparent;
+                border-radius: 40px;
+                &:hover {}
+            }
+            .active {}
+        }
+    }
+    // selected_book_chapter
+    .selected_book_chapter {
+        text-align: center;
+        padding-top: 15px;
+        user-select: none;
+        span {
+            padding-left: 3px;
+        }
+    }
+    // books_view_box 
+    .books_view_box {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        padding-top: 25px;
+        .bookBox {
+            cursor: pointer;
+            border-radius: 10px;
+            padding: 20px 15px;
+            height: max-content;
+            transition: ease 0.3s;
+            &:hover {
+                transform: scale(.96);
+                .boookInfo .bookDesc {}
+            }
+            .bookName {
+                padding-bottom: 7px;
+                display: flex;
+                align-items: center;
+                p:first-child {
+                    font-size: 16px;
+                    font-weight: 500;
+                    text-transform: capitalize;
+                }
+                p:last-child {
+                    font-size: 20px;
+                    font-weight: 500;
+                    padding-left: 10px;
+                }
+            }
+            .boookInfo {
+                .bookDesc {
+                    font-size: 16px;
+                    font-weight: 300;
+                    padding-bottom: 15px;
+                    margin-bottom: 7px;
+                    transition: border 0.3s ease;
+                }
+                p {
+                    font-size: 15px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    // chapters_view_box
+    .chapters_view_box {
+        cursor: pointer;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        padding-top: 25px;
+        .chapterBox {
+            border-radius: 10px;
+            padding: 15px;
+            height: max-content;
+            transition: 0.3s ease;
+            &:hover {
+                transform: scale(.96);
+                border-color: transparent;
+                .chapterName {
+                    .chapterTitleEng * {}
+                }
+            }
+            .chapterName {
+                display: flex;
+                flex-wrap: wrap;
+                transition: border 0.3s ease;
+                .chapterTitleEng {
+                    font-size: 16px;
+                    font-weight: 500;
+                    padding-bottom: 5px;
+                    span {
+                        transition: 0.3s ease;
+                    }
+                }
+                .chapterTitleAra {
+                    font-size: 20px;
+                    font-weight: 500;
+                    padding-bottom: 15px;
+                    padding-left: 7px;
+                }
+            }
+            .chapterInfo {
+                padding-top: 10px;
+                p {
+                    font-size: 16px;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}

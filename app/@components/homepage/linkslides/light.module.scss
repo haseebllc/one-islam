@@ -1,0 +1,112 @@
+@import "../../../scss/partials/extend";
+@import "../../../scss/partials/variable";
+
+/**/
+
+.LinkSlidesContainer {
+    .container {
+        .swiper {
+            .SwiperSlide {
+                .LinkSlide {
+                    .slideText_nd_btn {
+                        h4 {
+                            color: white;
+                        }
+                        p {
+                            color: white;
+                        }
+                        button a {
+                            color: white;
+                            border: 1px solid #fff;
+                            &:hover {
+                                color: black;
+                            }
+                        }
+                    }
+                    .slideImg {
+                        img {}
+                    }
+                }
+                .LinkSlide1 {
+                    background-color: $theme_aqua_02;
+                    button a {
+                        background-color: $theme_aqua_02;
+                        &:hover {
+                            background-color: white;
+                        }
+                    }
+                }
+                .LinkSlide2 {
+                    background-color: $theme_green_04;
+                    button a {
+                        background-color: $theme_green_04;
+                        &:hover {
+                            background-color: white;
+                        }
+                    }
+                }
+                .LinkSlide3 {
+                    background-color: $theme_green_05;
+                    button a {
+                        background-color: $theme_green_05;
+                        &:hover {
+                            background-color: white;
+                        }
+                    }
+                }
+                .LinkSlide4 {
+                    background-color: $theme_green_07;
+                    button a {
+                        background-color: $theme_green_07;
+                        &:hover {
+                            background-color: white;
+                        }
+                    }
+                }
+            }
+        }
+        // islamic-calander 
+        .calanderViewContainer {
+            box-shadow: 1px 1px 35px .3pc rgba(0, 0, 0, 0.096);
+            >h3 {
+                color: black;
+            }
+            >p {
+                color: black;
+            }
+            .exploreButton {
+                background-color: $theme_light_02;
+                >p {
+                    color: black;
+                }
+                a {
+                    p {
+                        color: black;
+                    }
+                    span {
+                        color: black;
+                    }
+                    &:hover {
+                        p,
+                        span {
+                            color: white !important;
+                            opacity: 1 !important;
+                        }
+                    }
+                }
+                &:hover {
+                    background-color: $theme_green_07;
+                    >p {
+                        color: white;
+                    }
+                    a {
+                        p,
+                        span {
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

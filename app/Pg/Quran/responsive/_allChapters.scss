@@ -1,0 +1,86 @@
+// chapter all view ---
+.chaptersContainer {
+    padding-right: 3px;
+    border-right: 1px solid rgba(0, 0, 0, 0.499);
+    width: max-content;
+    .chaptersContainer__scroller {
+        padding-right: 20px;
+        overflow-y: scroll;
+        width: max-content;
+        height: 100vh;
+        //  row 
+        .surahNum_nd_surahName_Box__active {
+            * {
+                color: $theme_aqua_02 !important;
+            }
+            border-color: $theme_aqua_01 !important;
+            position: relative;
+            background-color: #03728b11;
+            &:hover {
+                background-color: #03728b11 !important;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 1px;
+                background-color: $theme_green_07;
+                width: 4px;
+                height: calc(100% - 15px);
+                border-radius: 20px
+            }
+        }
+        .surahNum_nd_surahName {
+            @extend .flexAlignCenter;
+            cursor: pointer;
+            color: black;
+            border: 1px solid #0000006e;
+            padding: 3px 10px 3px 7px;
+            margin-bottom: 3px;
+            border-radius: 6px;
+            user-select: none;
+            &:hover {
+                background-color: $theme_light_05;
+            }
+            //  num 
+            .surahNum {
+                @extend .flexRowAllCenter;
+                background-image: url(../../../../public/images/QuranPage/surahNumLogo1.png);
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 50px;
+                height: 50px;
+                font-size: 12px;
+            }
+            //  name info text 
+            .surahInfo {
+                padding-left: 5px;
+                h4 .symbol,
+                p .symbol {
+                    padding: 0 5px;
+                }
+                h4 {
+                    .nameEng {
+                        font-weight: 600;
+                        font-size: 14.3px;
+                    }
+                    .nameArb {
+                        font-size: 18px;
+                        font-weight: 500;
+                    }
+                }
+                p {
+                    font-size: 14px;
+                    .nameMeaning {
+                        font-weight: 500;
+                    }
+                    .totalAyah {
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+}

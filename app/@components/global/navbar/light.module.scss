@@ -1,0 +1,32 @@
+ @import "../../../scss/partials/variable";
+ /**/
+ 
+ // Header 
+ .header {
+     .nav__01 {
+         // logo  
+         // 
+         // navigation  
+         .nav__ul {
+             // navigation / links 
+             .nav_ul_li {
+                 a {
+                     &::after {
+                         background-color: black;
+                     }
+                 }
+             }
+         }
+         // buttons 
+         .nav__buttons {
+             // theming buton 
+             .ThemeChangeButton {
+                 // anim \
+                 .isActive_animation {
+                     background-color: $theme_aqua_01;
+                 }
+             }
+             // explore button 
+         }
+     }
+ }

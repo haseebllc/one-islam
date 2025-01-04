@@ -1,0 +1,48 @@
+ @import "../../../scss/partials/variable";
+ /**/
+ 
+ // Header 
+ .header {
+     background-color: $theme_green_08;
+     color: $theme_light_04;
+     .nav__01 {
+         // logo   
+         // 
+         // navigation  
+         .nav__ul {
+             // navigation / links 
+             .nav_ul_li {
+                 a {
+                     color: white;
+                     font-weight: 300;
+                     &::after {
+                         background-color: white;
+                     }
+                 }
+             }
+         }
+         // buttons 
+         .nav__buttons {
+             // theming buton 
+             .ThemeChangeButton {
+                 .ThemeChangeButton_icon {
+                     color: white;
+                 }
+                 // anim \
+                 .isActive_animation {
+                     background-color: $theme_aqua_02;
+                 }
+             }
+             // explore button 
+             .signupButton_Container {
+                 .signup__button {
+                     color: white;
+                     p,
+                     span {
+                         color: white;
+                     }
+                 }
+             }
+         }
+     }
+ }

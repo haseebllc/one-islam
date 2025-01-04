@@ -1,0 +1,234 @@
+/**/
+
+@import "../../../scss/partials/variable";
+@import "../../../scss/partials/extend";
+
+/**/
+
+.Hero_Section {
+    padding-bottom: 70px;
+    // hero-header --
+    .heroHeader {
+        .heroHeader_Nav {
+            @extend .flexAlignCenter;
+            width: 100%;
+            padding: 14px 20px;
+            border-radius: 15px;
+            //  hero nav text 
+            .heroHeaderNav_Text {
+                text-transform: uppercase;
+                font-size: 12px;
+                font-weight: 500;
+            }
+            //  hero nav links 
+            .heroHeaderNav_Ul {
+                @extend .flexRowAllCenter;
+                padding-left: 60px;
+                padding-right: 15px;
+                .heroHeaderNavUl_li {
+                    margin: 0 9px;
+                    a {
+                        position: relative;
+                        font-size: 14px;
+                        font-weight: 400;
+                        transition: 0.3s ease;
+                        overflow: hidden;
+                        transition: 0.3s ease;
+                        &:hover {
+                            background-position: 0 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //  hero-body --
+    .heroBody {
+        padding: 50px 0 0 0;
+        .heroBody__inner {
+            // heading -- 
+            .heading {
+                max-width: 900px;
+                text-align: center;
+                margin: auto;
+                .heading__text__01 {
+                    text-transform: capitalize;
+                    font-size: 12px;
+                    font-weight: 400;
+                    width: max-content;
+                    border-radius: 18px;
+                    padding: 7px 12px;
+                    margin: 10px auto;
+                    display: none;
+                }
+                .heading__text__02 {
+                    font-size: 46px;
+                    font-weight: 600;
+                }
+                .heading__text__03 {
+                    padding: 25px 0 0 0;
+                    font-size: 16px;
+                }
+            }
+            // verse finder  container 
+            .hadith_verse_find_container {
+                padding: 60px 0 20px 0;
+                margin: auto;
+                width: max-content;
+                .verseFind_form {
+                    @extend .flexAlignCenter;
+                    width: max-content;
+                    .chapterInputContainer,
+                    .verseInputContainer {
+                        position: relative;
+                        input {
+                            width: 160px;
+                            height: 35px;
+                            margin-right: 5px;
+                            padding-left: 7px;
+                        }
+                    }
+                }
+                //  hadith form 
+                .hadithFind_form {
+                    @extend .flexAlignCenter;
+                    width: max-content;
+                    .hadithBookSelectorContainer {
+                        user-select: none;
+                        position: relative;
+                        //  books menu 
+                        .hadithBooksMenuScript {
+                            transform: translateY(0) !important;
+                            opacity: 100 !important;
+                            visibility: visible !important;
+                        }
+                        .hadithBooksMenu {
+                            position: absolute;
+                            z-index: 3;
+                            left: 0;
+                            bottom: calc(100% + 5px);
+                            width: 100%;
+                            transform: translateY(30px);
+                            opacity: 0;
+                            visibility: hidden;
+                            transition: 0.3s ease;
+                            cursor: default;
+                            ul {
+                                padding: 15px 10px;
+                                li {
+                                    @extend .flexRowBetween;
+                                    pointer-events: all;
+                                    margin: 4px 0;
+                                    padding: 4px 0;
+                                    font-size: 14px;
+                                    cursor: pointer;
+                                    span {
+                                        transform: rotate(-90deg);
+                                        font-size: 21px;
+                                        opacity: 0;
+                                        transition: 0.3s ease;
+                                    }
+                                    &:hover span {
+                                        opacity: 100;
+                                    }
+                                }
+                            }
+                        }
+                        //  clickable selector 
+                        .hadithBookSelector {
+                            @extend .flexRowBetween;
+                            position: relative;
+                            cursor: pointer;
+                            width: 160px;
+                            height: 35px;
+                            margin-right: 5px;
+                            padding: 0 10px;
+                            p {
+                                font-size: 14px;
+                                font-weight: 300;
+                            }
+                        }
+                    }
+                    .hadithNoInputContainer {
+                        margin-right: 5px;
+                        input {
+                            width: 160px;
+                            height: 35px;
+                            padding: 0 10px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+                //  form button to submit query
+                .verseHadith_findBtn {
+                    @extend .flexRowAllCenter;
+                    cursor: pointer;
+                    height: 35px;
+                    padding: 0 30px;
+                    font-size: 14px;
+                    border-radius: 3px;
+                    font-weight: 300;
+                    span {
+                        transform: translateY(1px);
+                        padding-left: 7px;
+                        transition: 0.3s ease;
+                        font-size: 18px;
+                    }
+                    &:hover span {
+                        transform: translateY(1px) translateX(5px);
+                    }
+                }
+            }
+            // quran hadith selection 
+            .QuranHadithSelector {
+                @extend .flexAlignCenter;
+                width: max-content;
+                position: relative;
+                margin: auto;
+                width: max-content;
+                .QuranSelectIcon,
+                .HadithSelectIcon {
+                    @extend .flexRowAllCenter;
+                    cursor: pointer;
+                    width: 110px;
+                    height: 30px;
+                    position: relative;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -7px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 0;
+                        height: 1px;
+                        transition: 0.3s ease;
+                    }
+                    &:hover::after {
+                        width: 100%;
+                    }
+                    span {
+                        font-size: 19px;
+                        padding-right: 4px;
+                        transition: 0.4s ease;
+                    }
+                    p {
+                        font-size: 14px;
+                        font-weight: 300;
+                        user-select: none;
+                        text-transform: capitalize;
+                        transition: 0.4s ease;
+                    }
+                }
+                .QuranHadithSelector_anim {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 110px;
+                    height: 100%;
+                    pointer-events: none;
+                    transition: 0.3s ease;
+                }
+            }
+        }
+    }
+}

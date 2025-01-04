@@ -1,0 +1,238 @@
+@import "../../../scss/partials/variable";
+
+/**/
+
+$themeInner: #545c42;
+.Hadithage__main {
+    background-color: $theme_green_08;
+    // simple container wrap
+    .hadithPage_container {
+        background-color: $theme_green_10;
+    }
+    // current book details and curennt book chapter hadiths
+    .currentBook_nd_chapHadiths_wrap {}
+}
+
+// tools 
+.tools__wrap {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.51);
+    color: white;
+    .tools__wrap__innnerFlex {
+        .innerFlex_col {
+            .tool {}
+            // .change__book_chapter 
+            .change__book_chapter {}
+        }
+    }
+}
+
+// toggle details  col 1
+.headerTool_col1 {
+    &:hover {
+        >div {}
+    }
+    >span {
+        color: white;
+    }
+    >div {
+        background-color: $theme_aqua_02;
+        p {
+            &::before {
+                background-color: $theme_aqua_02;
+            }
+            span {
+                color: white;
+            }
+        }
+    }
+}
+
+// header tools col 2
+.headerTool_col2 {
+    &:hover {
+        background-color: $themeInner;
+    }
+    >p {}
+    >div {
+        >p {}
+        span {
+            color: white;
+        }
+    }
+}
+
+// .change__book_nd_chapter 
+.change__book_nd_chapter {
+    // change__book_nd_chapter_close_btn 
+    .change__book_nd_chapter_close_btnWrap {
+        .change__book_nd_chapter_close_btn {
+            background-color: $theme_green_08;
+            &:hover {}
+            span {
+                color: white;
+            }
+        }
+    }
+    // book, chapter navigation 
+    .selector_container {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.514);
+        .book_selector,
+        .chapter_selector {
+            p {
+                &:hover {
+                    border-color: whitesmoke;
+                }
+                color: white;
+            }
+            .active {
+                background-color: $themeInner;
+                border-color: transparent;
+            }
+        }
+    }
+    // selected_book_chapter
+    .selected_book_chapter {
+        color: white;
+        span {
+            color: $theme_green_08;
+            font-weight: 500;
+            font-size: 18px;
+        }
+    }
+    // books_view_box 
+    .books_view_box {
+        .bookBox {
+            color: white;
+            border: 1px solid $themeInner;
+            background-color: $themeInner;
+            &:hover {
+                background-color: $theme_green_08;
+                border-color: transparent;
+                color: white;
+                .boookInfo .bookDesc {
+                    border-bottom: 1px solid rgb(255, 255, 255);
+                }
+            }
+            .bookName {
+                p:first-child {}
+                p:last-child {}
+            }
+            .boookInfo {
+                .bookDesc {
+                    border-bottom: 1px solid white;
+                }
+                p {}
+            }
+        }
+    }
+    // chapters_view_box
+    .chapters_view_box {
+        .chapterBox {
+            border: 1px solid $themeInner;
+            background-color: $themeInner;
+            color: white;
+            &:hover {
+                background-color: $theme_green_08;
+                color: white;
+                border-color: transparent;
+                .chapterName {
+                    border-bottom: 1px solid rgb(250, 250, 250);
+                    .chapterTitleEng * {
+                        color: white;
+                    }
+                }
+            }
+            .chapterName {
+                border-bottom: 1px solid white;
+                .chapterTitleEng {
+                    span {
+                        padding-right: 5px;
+                        font-size: 18px;
+                        font-weight: 300;
+                        color: white;
+                    }
+                }
+                .chapterTitleAra {}
+            }
+            .chapterInfo {
+                p {}
+            }
+        }
+    }
+}
+
+// book details 
+.loading {
+    color: white;
+}
+
+.currentBook_detailsMd {
+    .bookDetailBox,
+    .chapterDetailBox {
+        background-color: $themeInner;
+        border: 1.5px solid transparent;
+        &:hover {
+            border-color: $theme_green_08;
+        }
+        h4 {
+            color: white;
+            background-color: $theme_green_08;
+            width: max-content;
+            padding: 2px 10px;
+            margin-bottom: 7px;
+        }
+        p {
+            color: white;
+            span {
+                color: white;
+                border-bottom: 1px solid white;
+            }
+        }
+    }
+    .bookDetailBox p:nth-child(2) span {}
+    .chapterDetailBox p:nth-child(3) span {}
+}
+
+.currentChap_hadiths_container {
+    .hadith_box {
+        background-color: $themeInner;
+        border: 1.5px solid transparent;
+        &:hover {
+            border-color: $theme_green_08;
+        }
+        .refrence_nd_arabicHadith {
+            .referenceTag {
+                color: white;
+                background-color: $theme_green_08;
+                width: max-content;
+                padding: 20px 15px !important;
+                margin-bottom: 20px;
+                font-weight: 200 !important;
+                span {
+                    color: white;
+                    border-bottom: 1px solid white;
+                }
+            }
+            .arabicText {
+                background-color: $theme_green_10;
+                padding: 20px 15px !important;
+                color: white;
+            }
+        }
+        .englishText_nd_grade {
+            padding-top: 20px;
+            >h5 {
+                color: white;
+            }
+            >p {
+                border-bottom: 1px solid rgba(254, 254, 254, 0.502);
+                color: white;
+                font-weight: 300 !important;
+            }
+            >h6 {
+                color: white;
+                font-weight: 300 !important;
+            }
+        }
+    }
+}

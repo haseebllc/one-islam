@@ -1,0 +1,61 @@
+// app/globl.scss 
+@import "./scss/partials/fonts";
+@import "./scss/partials/googleIcons";
+@import "./scss/swiper/linkSlidesSwiper";
+@import "./scss/swiper/reviewsSwiper";
+// 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+    text-transform: capitalize;
+    // transition: 0.3s ease all;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+img {
+    display: block;
+}
+
+li,
+a,
+span,
+input,
+textarea,
+button {
+    list-style: none;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    outline: none;
+    color: black;
+}
+
+.container {
+    margin: auto;
+    max-width: 1170px;
+    width: 100%;
+    padding: 0 15px;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    padding: 0;
+    margin: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(76, 76, 76, 0.733);
+    cursor: grab;
+    border-radius: 30px;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}

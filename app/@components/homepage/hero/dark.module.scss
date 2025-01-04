@@ -1,0 +1,114 @@
+@import "../../../scss/partials/variable";
+
+/**/
+
+.Hero_Section {
+    background-color: $theme_green_08;
+    // hero-header --
+    .heroHeader {
+        .heroHeader_Nav {
+            background-color: rgba(255, 255, 255, 0.074);
+            //  hero nav text 
+            .heroHeaderNav_Text {
+                color: white;
+            }
+            //  hero nav text 
+            //  hero nav links 
+            .heroHeaderNav_Ul {
+                .heroHeaderNavUl_li {
+                    a {
+                        background: linear-gradient(to right, $theme_light_03 50%, white 50%);
+                        background-clip: text;
+                        background-size: 200% 100%;
+                        background-position: 100%;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+    //  hero-body --
+    .heroBody {
+        .heroBody__inner {
+            // heading -- 
+            .heading {
+                .heading__text__01 {
+                    background-color: $theme_green_07;
+                    color: white;
+                }
+                .heading__text__02 {
+                    color: $theme_light_04;
+                }
+                .heading__text__03 {
+                    color: $theme_light_04;
+                    font-weight: 200;
+                }
+            }
+            // verse finder  container 
+            .hadith_verse_find_container {
+                .verseFind_form {
+                    .chapterInputContainer,
+                    .verseInputContainer {
+                        input {
+                            background-color: $theme_light_04;
+                            &::placeholder {
+                                color: rgba(0, 0, 0, 0.718);
+                            }
+                        }
+                    }
+                }
+                //  hadith form 
+                .hadithFind_form {
+                    .hadithBookSelectorContainer {
+                        //  books menu  
+                        .hadithBooksMenu {
+                            background-color: $theme_light_04;
+                            cursor: default;
+                            ul {
+                                li {
+                                    span {
+                                        color: black;
+                                    }
+                                }
+                            }
+                        }
+                        //  clickable selector 
+                        .hadithBookSelector {
+                            background-color: $theme_light_04;
+                        }
+                    }
+                    .hadithNoInputContainer {
+                        input {
+                            background-color: $theme_light_04;
+                        }
+                    }
+                }
+                //  form button to submit query
+                .verseHadith_findBtn {
+                    background-color: $theme_aqua_02;
+                    color: white;
+                    span {
+                        color: white;
+                    }
+                }
+            }
+            // quran hadith selection 
+            .QuranHadithSelector {
+                .QuranSelectIcon,
+                .HadithSelectIcon {
+                    p,
+                    span {
+                        color: white !important;
+                    }
+                    &::after {
+                        background-color: rgba(255, 255, 255, 0.548);
+                        height: .5px;
+                    }
+                }
+                .QuranHadithSelector_anim {
+                    background-color: $theme_green_05;
+                }
+            }
+        }
+    }
+}

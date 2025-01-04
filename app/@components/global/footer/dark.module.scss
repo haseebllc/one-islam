@@ -1,0 +1,81 @@
+@import "../../../scss/partials/variable";
+
+/**/
+
+.FooterBg {
+    background-color: $theme_green_08;
+    .Footer {
+        background-color: rgb(20, 20, 20) !important;
+        border-radius: 0px;
+        .FooterGrid {
+            .GridBox {
+                color: white;
+                .title {}
+                .lists {
+                    .links {
+                        color: white;
+                        span {
+                            color: white;
+                        }
+                        p {}
+                        &:hover {
+                            span {}
+                        }
+                    }
+                }
+            }
+            .GridBox4 {
+                .formBox {
+                    &::after {
+                        background-color: white;
+                    }
+                    p {}
+                    form {
+                        input {
+                            background-color: transparent;
+                            color: white;
+                            &::placeholder {
+                                color: white;
+                            }
+                        }
+                        button {
+                            color: white;
+                            background-color: transparent;
+                            border-top: 1px solid white;
+                            border-right: 1px solid white;
+                            span {
+                                color: rgba(255, 255, 255, 0.698);
+                            }
+                            &:hover {
+                                span {}
+                            }
+                        }
+                    }
+                }
+                // social icons 
+                .socialIconsWrap {
+                    p {
+                        color: white;
+                    }
+                    .iconsRow {
+                        a {
+                            color: white;
+                            img {}
+                            &::after {
+                                background-color: white;
+                            }
+                            &:hover::after {}
+                        }
+                    }
+                }
+            }
+        }
+        // copyright-text ---
+        .copyRightStamp {
+            border-top: .01px solid #ffffff43;
+            p {
+                color: white;
+            }
+        }
+    }
+}

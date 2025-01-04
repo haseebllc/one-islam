@@ -1,0 +1,210 @@
+@import "../../../scss/partials/variable";
+
+/**/
+
+.Hadithage__main {
+    // simple container wrap
+    .hadithPage_container {
+        background-color: $theme_light_02;
+    }
+    // current book details and curennt book chapter hadiths
+    .currentBook_nd_chapHadiths_wrap {}
+}
+
+// .change__book_nd_chapter 
+.change__book_nd_chapter {
+    // change__book_nd_chapter_close_btn 
+    .change__book_nd_chapter_close_btnWrap {
+        .change__book_nd_chapter_close_btn {
+            background-color: $theme_aqua_02;
+            &:hover {}
+            span {
+                color: white;
+            }
+        }
+    }
+    // book, chapter navigation 
+    .selector_container {
+        border-bottom: 1px solid black;
+        .book_selector,
+        .chapter_selector {
+            p {
+                &:hover {
+                    border-color: black;
+                }
+            }
+            .active {
+                background-color: white;
+                border-color: black;
+            }
+        }
+    }
+    // selected_book_chapter
+    .selected_book_chapter {
+        span {
+            color: $theme_green_09;
+            border-bottom: 1px solid black;
+        }
+    }
+    // books_view_box 
+    .books_view_box {
+        .bookBox {
+            color: black;
+            border: 1px solid #000;
+            &:hover {
+                background-color: $theme_green_08;
+                border-color: transparent;
+                color: white;
+                .boookInfo .bookDesc {
+                    border-bottom: 1px solid rgb(255, 255, 255);
+                }
+            }
+            .bookName {
+                p:first-child {}
+                p:last-child {}
+            }
+            .boookInfo {
+                .bookDesc {
+                    border-bottom: 1px solid black;
+                }
+                p {}
+            }
+        }
+    }
+    // chapters_view_box
+    .chapters_view_box {
+        .chapterBox {
+            border: 1px solid #000;
+            color: black;
+            &:hover {
+                background-color: $theme_green_08;
+                color: white;
+                border-color: transparent;
+                .chapterName {
+                    border-bottom: 1px solid rgb(250, 250, 250);
+                    .chapterTitleEng * {
+                        color: white;
+                    }
+                }
+            }
+            .chapterName {
+                border-bottom: 1px solid black;
+                .chapterTitleEng {
+                    span {}
+                }
+                .chapterTitleAra {}
+            }
+            .chapterInfo {
+                p {}
+            }
+        }
+    }
+}
+
+// book details 
+.loading {
+    color: black;
+}
+
+.currentBook_detailsMd {
+    .bookDetailBox,
+    .chapterDetailBox {
+        background-color: white;
+        border: 1px solid #00000000;
+        &:hover {
+            border: 1px solid $theme_aqua_01;
+        }
+        h4 {}
+        p {
+            span {
+                color: $theme_aqua_01;
+                border-bottom: 1px solid #000000c9;
+            }
+        }
+    }
+    .bookDetailBox p:nth-child(2) span {}
+    .chapterDetailBox p:nth-child(3) span {}
+}
+
+// chapter hadits 
+.loading {
+    color: black;
+}
+
+.currentChap_hadiths_container {
+    .hadith_box {
+        background-color: white;
+        border: 1px solid transparent;
+        &:hover {
+            border-color: $theme_aqua_01;
+        }
+        .refrence_nd_arabicHadith {
+            .referenceTag {
+                color: black;
+                span {
+                    color: $theme_aqua_01;
+                    border-bottom: 1px solid #000000ca;
+                }
+            }
+            .arabicText {}
+        }
+        .englishText_nd_grade {
+            >h5 {}
+            >p {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.411);
+            }
+            >h6 {}
+        }
+    }
+}
+
+// tools 
+.tools__wrap {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.446);
+    .tools__wrap__innnerFlex {
+        .innerFlex_col {
+            .tool {}
+            // .change__book_chapter 
+            .change__book_chapter {}
+        }
+    }
+}
+
+// toggle details  col 1
+.headerTool_col1 {
+    &:hover {
+        >div {}
+    }
+    >span {}
+    >div {
+        background-color: $theme_green_05;
+        p {
+            &::before {
+                background-color: $theme_green_05;
+            }
+            span {
+                color: white;
+            }
+        }
+    }
+}
+
+// header tools col 2
+.headerTool_col2 {
+    &:hover {
+        background-color: white;
+        input {
+            background-color: white;
+        }
+    }
+    >p {}
+    >div {
+        >p {
+            input {
+                background-color: $theme_light_02;
+                border: 1px solid #0000005e;
+            }
+        }
+        span {}
+    }
+}

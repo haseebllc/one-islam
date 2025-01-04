@@ -1,0 +1,67 @@
+@import "../../../scss/partials/variable";
+
+/**/
+
+.HadithAboutContainer {
+    background-color: $theme_green_08;
+    .HadithAboutContainer__row {
+        .row__col {}
+        // col2 
+        .row__imgWrapper,
+        .row__col2 {
+            img {}
+        }
+        // col1 
+        .row__textWrapper,
+        .row__col1 {
+            .textBox1 {
+                border-left: 1.5px solid white;
+                h4 {}
+            }
+            .textBox {
+                h4 {
+                    color: $theme_light_04;
+                    font-weight: 500;
+                }
+                p {
+                    color: $theme_light_04;
+                    font-weight: 200;
+                }
+            }
+            //  explore button 
+            .exploreButton {
+                a {
+                    background: linear-gradient(to right, $theme_green_03 50%, white 50%);
+                    background-clip: text;
+                    background-size: 200% 100%;
+                    background-position: 100%;
+                    ;
+                    p {}
+                    span {}
+                    &:hover {}
+                }
+            }
+        }
+    }
+}
+
+//  ... 
+.hadithBooks__infoRowContainer {
+    background-color: $theme_green_08;
+    .hadithBooks__infoRow {
+        background-color: $theme_green_08;
+        color: rgba(255, 255, 255, 0.727);
+        border-top: 1px solid #ffffff38;
+        .infoRowBox {
+            .infoRowBox_icon {
+                span {
+                    color: white;
+                }
+            }
+            .infoRowBox_text {
+                h4 {}
+                p {}
+            }
+        }
+    }
+}

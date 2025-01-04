@@ -1,0 +1,319 @@
+@import "../../../scss/partials/variable";
+@import "../../../scss/partials/extend";
+
+/**/
+
+$themeInner: #414833;
+// page.module.scss 
+.fullViewContainer {
+    .closeFullView {
+        >div {
+            background-color: $theme_green_06;
+            color: white;
+        }
+    }
+    .arabicVerse {
+        color: white !important;
+        font-size: 25px !important;
+        font-weight: 500 !important;
+        padding-bottom: 20px !important;
+        span {
+            border: 1px solid white !important;
+            color: white !important;
+            font-weight: 400;
+            font-size: 18px;
+        }
+    }
+    .englishVerse {
+        color: rgba(255, 255, 255, 0.799);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        font-weight: 200;
+        span {
+            border: 1px solid white;
+            color: white;
+        }
+    }
+}
+
+.themeContaining {
+    background-color: $theme_green_08;
+}
+
+.QuranPage_Container {
+    .Container {
+        // background-color: #353d2f;
+        background-color: $theme_green_10;
+        color: white;
+        //  heading ---
+        .heading_nd_surahSearch {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.743);
+            // heading 
+            .heading {
+                h4 {
+                    color: white;
+                }
+                p {
+                    color: white;
+                }
+            }
+        }
+        //  content row ---
+        .content__wrap {}
+    }
+}
+
+// _all-chapters.scss - chapter all view ---
+.chaptersContainer {
+    border-right: 1px solid rgba(255, 255, 255, 0.546);
+    .chaptersContainer__scroller {
+        //  row 
+        .surahNum_nd_surahName {
+            background-color: #545c42;
+            color: white;
+            border: 1px solid #545c42;
+            transition: 0.3s ease;
+            &:hover {
+                border: 1px solid #333826;
+                background-color: #333826;
+                transform: scale(.95);
+            }
+            //  num 
+            .surahNum {
+                background-image: url(../../../..//public/images/QuranPage/surahNumLogo1-white.png);
+                span {
+                    color: white;
+                    text-align: center;
+                    font-size: 16px;
+                    background-color: $themeInner;
+                    border-radius: 10px;
+                    padding: 1px 7px;
+                }
+            }
+            //  name info text 
+            .surahInfo {
+                h4,
+                p {
+                    span {
+                        color: rgba(255, 255, 255, 0.842);
+                    }
+                }
+                h4 {
+                    .nameEng {}
+                    .nameArb {}
+                }
+                p {
+                    .nameMeaning {}
+                    .totalAyah {}
+                }
+            }
+        }
+        .surahNum_nd_surahName_Box__active {
+            * {
+                color: white;
+            }
+            border-color: $theme_green_08;
+            background-color: $theme_green_08;
+            &:hover {
+                border-color: $theme_green_08;
+                background-color: $theme_green_08;
+                transform: none;
+            }
+            &::before {
+                background-color: #ffffff6f;
+            }
+        }
+    }
+}
+
+// _find-chapter.scss - surah finder 
+.findSurahContainer {
+    // search form
+    form {
+        border-bottom: 1px solid white;
+        background-color: transparent;
+        span {
+            font-size: 21px;
+            color: white;
+        }
+        input {
+            color: white;
+            background-color: transparent;
+            &::placeholder {
+                color: white;
+                font-weight: 100;
+            }
+        }
+    }
+    // result display box 
+    .searchResultContainer {
+        background-color: $theme_green_08;
+        color: white;
+        .surahBox {
+            border: 1px solid #ffffff75;
+            &:hover {
+                background-color: #333826;
+                border-color: #333826;
+                transform: scale(.95);
+                .surahNo p {
+                    background-color: #333826;
+                }
+            }
+            .surahNo {
+                p {
+                    background-color: $theme_green_08;
+                }
+            }
+            .surahInfo {
+                p {
+                    span {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// _solo-chapter.scss - chapter solo view ---
+.SurahViewContainer {
+    // info box ---
+    .surahInfoBox__outter {
+        .surahInfoBox__bgAnim {
+            background-color: $theme_green_08;
+        }
+        .surahInfoBox__inner {
+            border: 1px solid rgba(255, 255, 255, 0.311);
+            .surahName_nd_ayah {
+                h4 {
+                    color: rgba(255, 255, 255, 0.826);
+                }
+                p {
+                    span {
+                        color: rgb(245, 245, 245);
+                    }
+                    .symbol {}
+                }
+            }
+            .surahNum {
+                span {
+                    color: white;
+                    background-color: $theme_green_08;
+                }
+            }
+        }
+    }
+    // current surah  ---
+    .currentSurahContainer {
+        // bismillah text / img 
+        .bismillah__img {
+            img {}
+        }
+        .currentSurahVersesView {
+            .arabicVerse {
+                color: $theme_green_08;
+                font-size: 30px;
+                font-weight: 800;
+                span {
+                    border: 2px solid $theme_green_08;
+                    color: $theme_green_08;
+                    font-weight: 400;
+                    font-size: 18px;
+                }
+            }
+            .englishVerse {
+                color: rgba(255, 255, 255, 0.799);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+                font-weight: 200;
+                span {
+                    border: 1px solid white;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+// _usefull-tools.scss 
+.usefull_toolsContainer {
+    .containerInner {
+        .tool {
+            .toolAbslt {
+                background-color: $theme_aqua_02;
+                >div {
+                    p {
+                        color: white;
+                    }
+                    span {
+                        background-color: $theme_aqua_02;
+                    }
+                }
+            }
+            &:hover .toolAbslt {
+                >div span {}
+            }
+            cursor: pointer;
+            span {
+                color: white;
+                color: black;
+            }
+        }
+        .scrollToCurrent_tool {
+            span {}
+        }
+    }
+    // .langSelectContainer 
+    .noMatch {
+        color: white;
+    }
+    .langSelectContainer {
+        .selectBox {
+            .currentView {
+                border: 1px solid #ffffff7e;
+                >p {
+                    background-color: $themeInner;
+                    color: rgba(0, 0, 0, 0.701);
+                    font-weight: 400;
+                    font-size: 16px;
+                }
+                >input {
+                    background-color: transparent;
+                    font-size: 14px;
+                    padding-top: 2px;
+                    font-weight: 100;
+                    color: white;
+                }
+                >span {
+                    border: 1px solid #000;
+                    &:hover {
+                        background-color: $theme_green_08;
+                        color: white;
+                    }
+                }
+                .displayBox {
+                    background-color: $theme_green_08;
+                    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.144);
+                    input {
+                        color: black;
+                        &::placeholder {}
+                    }
+                    .box {
+                        .languageOption {
+                            &:hover span {}
+                            p {
+                                color: white;
+                            }
+                            span {
+                                color: white;
+                            }
+                        }
+                    }
+                }
+                .vrsnFetredisplayBox {
+                    p {
+                        border-bottom: 1px solid white;
+                    }
+                }
+            }
+        }
+    }
+}

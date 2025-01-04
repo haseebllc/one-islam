@@ -1,0 +1,77 @@
+// surah finder 
+.findSurahContainer {
+    max-width: 230px;
+    position: relative;
+    // search form
+    form {
+        @extend .flexRowAllCenter;
+        padding: 3px 7px;
+        position: relative;
+        span {
+            font-size: 21px;
+        }
+        input {
+            flex: 1;
+            height: 35px;
+            outline: none;
+            padding-left: 3px;
+            background-color: transparent;
+            font-size: 15px;
+            font-weight: 300;
+            &::placeholder {
+                padding-left: 3px;
+                font-size: 15px;
+                font-weight: 300;
+            }
+        }
+    }
+    // result display box 
+    .searchResultContainer {
+        position: absolute;
+        width: max-content;
+        padding: 20px 15px;
+        height: max-content;
+        max-height: 400px;
+        overflow-y: scroll;
+        top: calc(100% + 10px);
+        right: 0;
+        z-index: 5;
+        .surahBox {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+            border-radius: 7px;
+            padding: 7px 12px 7px 5px;
+            margin-bottom: 5px;
+            transition: 0.3s ease;
+            &:hover {
+                transform: scale(.95);
+                .surahNo p {}
+            }
+            .surahNo {
+                @extend .flexRowAllCenter;
+                background-image: url(../../../../public/images/QuranPage/surahNumLogo1-white.png);
+                width: 50px;
+                height: 50px;
+                background-position: center;
+                background-size: cover;
+                p {
+                    font-size: 14px;
+                    font-weight: 400;
+                    padding: 1px 5px;
+                }
+            }
+            .surahInfo {
+                padding-left: 5px;
+                p {
+                    font-size: 14px;
+                    font-weight: 400;
+                    span {
+                        padding: 0 3px;
+                    }
+                }
+            }
+        }
+    }
+}

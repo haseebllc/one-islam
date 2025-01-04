@@ -1,0 +1,68 @@
+@import "../../scss/partials/variable";
+@import "../../scss/partials/extend";
+@import "./partial/findChapter";
+@import "./partial/usefullTools";
+@import "./partial/allChapters";
+@import "./partial/soloChapter";
+
+/**/
+
+.loading {
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    width: 100%;
+    padding-top: 50px;
+}
+
+.fullViewContainer {
+    padding-bottom: 100px;
+    .closeFullView {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 50px;
+        >div {
+            border-radius: 100%;
+            width: 45px;
+            height: 45px;
+            @extend .flexRowAllCenter;
+            cursor: pointer;
+            transition: 0.3s ease;
+            &:hover {
+                transform: scale(.8);
+            }
+        }
+    }
+}
+
+.QuranPage_Container {
+    .Container {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        padding: 40px 30px 20px 30px;
+        height: max-content;
+        overflow: hidden;
+        //  heading ---
+        .heading_nd_surahSearch {
+            @extend .flexRowBetween;
+            padding-bottom: 20px;
+            // heading 
+            .heading {
+                h4 {
+                    font-size: 25px;
+                    font-weight: 600;
+                    padding-bottom: 1px;
+                }
+                p {
+                    font-size: 15px;
+                    font-weight: 300;
+                }
+            }
+        }
+        //  content row ---
+        .content__wrap {
+            display: flex;
+            padding: 0 0 50px 0;
+        }
+    }
+}

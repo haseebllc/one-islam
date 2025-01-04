@@ -1,0 +1,61 @@
+@import "../../../scss/partials/variable";
+
+/**/
+
+.PricingDonate__container {
+    background-color: $theme_green_08;
+    color: white;
+    // heading ---
+    .heading {
+        // pseudo 
+        .heading_pseudo {
+            span {
+                background-color: white;
+                width: 1.5px;
+            }
+        }
+        // text 
+        .heading_text {
+            h4 {
+                font-weight: 500;
+            }
+        }
+    }
+    //  content ---
+    .content__wrap {
+        .content__box {
+            padding: 70px 30px;
+            background-color: rgb(20, 20, 20);
+            .text {}
+            .price {
+                h3 {}
+                p {}
+            }
+            .services {
+                ul {
+                    li {
+                        span {
+                            color: $theme_light_04;
+                        }
+                        p {
+                            color: $theme_light_04;
+                        }
+                    }
+                }
+            }
+            .button {
+                background-color: transparent;
+                a {
+                    background-color: $theme_aqua_02;
+                    color: white;
+                    border: 1px solid $theme_aqua_02;
+                    border-radius: 20px;
+                    &:hover {
+                        background-color: rgb(20, 20, 20);
+                        color: white
+                    }
+                }
+            }
+        }
+    }
+}

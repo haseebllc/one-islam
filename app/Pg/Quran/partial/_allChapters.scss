@@ -1,0 +1,73 @@
+// chapter all view ---
+.chaptersContainer {
+    padding-right: 3px;
+    width: max-content;
+    .chaptersContainer__scroller {
+        padding-right: 20px;
+        overflow-y: scroll;
+        width: max-content;
+        height: 100vh;
+        //  row 
+        .surahNum_nd_surahName_Box__active {
+            * {}
+            position: relative;
+            &:hover {}
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 1px;
+                width: 4px;
+                height: calc(100% - 15px);
+                border-radius: 20px
+            }
+        }
+        .surahNum_nd_surahName {
+            @extend .flexAlignCenter;
+            cursor: pointer;
+            padding: 3px 10px 3px 7px;
+            margin-bottom: 7px;
+            border-radius: 6px;
+            user-select: none;
+            &:hover {}
+            //  num 
+            .surahNum {
+                @extend .flexRowAllCenter;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 50px;
+                height: 50px;
+                font-size: 12px;
+            }
+            //  name info text 
+            .surahInfo {
+                padding-left: 5px;
+                h4 .symbol,
+                p .symbol {
+                    padding: 0 5px;
+                }
+                h4 {
+                    .nameEng {
+                        font-weight: 600;
+                        font-size: 14.3px;
+                    }
+                    .nameArb {
+                        font-size: 18px;
+                        font-weight: 500;
+                    }
+                }
+                p {
+                    font-size: 14px;
+                    .nameMeaning {
+                        font-weight: 500;
+                    }
+                    .totalAyah {
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+}

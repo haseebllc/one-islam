@@ -1,0 +1,27 @@
+.flexRowBetween {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flexRowAllCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexColAllCenter {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexAlignCenter {
+    display: flex;
+    align-items: center;
+}
+
+.flexJustifyCenter {
+    display: flex;
+    justify-content: center;
+}
